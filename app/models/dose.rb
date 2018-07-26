@@ -1,11 +1,7 @@
 class Dose < ApplicationRecord
   belongs_to :ingredient
   belongs_to :cocktail
-  validates :name, presence: true, uniqueness: true
+  validates :description, presence: true
+  validates :ingredient_id, uniqueness: { scope: :cocktail_id }
 end
-
-
-# name cannot be blank (FAILED - 7)
-#   name is unique (FAILED - 8)
-#   has many doses (FAILED - 9)
 
