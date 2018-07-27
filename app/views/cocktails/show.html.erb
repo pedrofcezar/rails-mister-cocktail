@@ -2,7 +2,9 @@
   <div class="row">
     <div class="col-xs-12">
       <h1><%= @cocktail.name %></h1>
-      <%= link_to "Back to all cocktails", root_path %>
+      <%= link_to "Back to Drink's Home", root_path %>
+      <div> </div>
+      <%= link_to "Delete Cocktail", cocktail_path(@cocktail), method: :delete, mdata: {confirm: "Sure about it?"} %>
     </div>
   </div>
   <div class="row">
