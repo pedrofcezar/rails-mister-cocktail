@@ -4,7 +4,7 @@
       <h1><%= @cocktail.name %></h1>
       <%= link_to "Back to Drink's Home", root_path %>
       <div> </div>
-      <%= link_to "Delete Cocktail", cocktail_path(@cocktail), method: :delete, mdata: {confirm: "Sure about it?"} %>
+      <%= link_to "Delete Cocktail", cocktail_path(@cocktail), method: :delete, data: {confirm: "Sure about it?"} %>
     </div>
   </div>
   <div class="row">

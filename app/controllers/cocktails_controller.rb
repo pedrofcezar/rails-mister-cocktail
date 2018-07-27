@@ -20,13 +20,14 @@ class CocktailsController < ApplicationController
     else
       render 'new'
     end
+  end
 
-    def destroy
+  def destroy
       @cocktail = Cocktail.find(params[:id])
       @cocktail.destroy
       redirect_to root_path
-    end
   end
+
 
   private
 
